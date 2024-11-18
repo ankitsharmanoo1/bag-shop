@@ -1,12 +1,14 @@
 const  mongoose = require("mongoose");
+const dbgr = require("debug")("development:mongoose");
+const config = require("config")
 
 mongoose.connect("mongodb://127.0.0.1:27017/bagProject")
 .then(()=>{
-    console.log("Database Connect Sucessfully");
+    dbgr("Database Connect Sucessfully");
     
 })
 .catch((err)=>{
-   console.log(err);
+   dbgr(err);
    
 })
 
