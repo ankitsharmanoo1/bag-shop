@@ -23,8 +23,9 @@ if(process.env.NODE_ENV === "development"){
      
 }
 
-router.get("/", (req,res)=>{
-     res.send("hello i am Owner")
+router.get("/admin", (req,res)=>{
+     let sucess = req.flash("sucess");
+     res.render("createproducts",{sucess});
 })
 
 
