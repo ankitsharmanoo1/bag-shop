@@ -17,7 +17,7 @@ if(process.env.NODE_ENV === "development"){
              fullname,
              email,
              password,
-             
+              
      })
      res.status(201).send(createdOwner)
 }

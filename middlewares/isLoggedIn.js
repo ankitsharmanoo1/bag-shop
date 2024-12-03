@@ -13,7 +13,7 @@ module.exports = async function(req,res,next){
     req.user = user;
     next();
   }
-  catch(err){
+  catch(err){ 
     req.flash("error", "Something Wants Wrong");
     res.redirect("/");
   }
